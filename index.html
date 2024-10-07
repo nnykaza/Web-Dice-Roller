@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dice Roller</title>
+</head>
+<body onload="rollDice()">
+    <div class="container">
+        <h1>Dice Roller for Yahtzee</h1>
+        <p>Click the button below to roll the dice!</p>
+        <div id="dice-container">
+            <input type="text" id="die1" readonly>
+            <input type="text" id="die2" readonly>
+            <input type="text" id="die3" readonly>
+            <input type="text" id="die4" readonly>
+            <input type="text" id="die5" readonly>
+        </div>
+        <button id="roll-button" onclick="rollDice()" autofocus>Roll Dice</button>
+        <div class="version-info">
+            <span id="env-identifier">Test Azure Static</span>
+            <span>Version 2.04</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        const envIdentifier = process.env.ENV_IDENTIFIER || 'Development'; // Default value
+        document.getElementById('env-identifier').innerText = envIdentifier;
+    </script>
+    <div class="version-info">
+        <span id="env-identifier">Loading...</span>
+        <span>Version 2.04</span>
+    </div>    
+</body>
+</html>
